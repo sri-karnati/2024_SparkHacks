@@ -13,34 +13,49 @@
         </div>
     </header>
     <main>
-        <div class="input-container">
-            <section>
-                <label for="dropdown">Choose crop:</label>
-                <select id="dropdown" name="dropdown">
-                    <option value="option1">Corn</option>
-                    <option value="option2">Potatoes</option>
-                    <option value="option3">Wheat</option>
-                    <option value="option4">Strawberries</option>
-                    <option value="option4">Tomatoes</option>
-                    <option value="option5">Cucumbers</option>
-                    <option value="option6">Onions</option>
-                </select>
-            </section>
-            <section>
-                <label for="latitude">Enter Latitude:</label>
-                <input type="text" id="latitude" name="latitude">
-            </section>
-            <section>
-                <label for="longitude">Enter Longitude:</label>
-                <input type="text" id="longitude" name="longitude">
-            </section>
-        </div>
-        <div class="submit-container">
-            <button type="submit">Submit</button>
-        </div>
+        <form id="predictForm">
+            <div class="input-container">
+                <section>
+                    <label for="dropdown">Choose crop:</label>
+                    <select id="dropdown" name="dropdown">
+                        <option value="Corn">Corn</option>
+                        <option value="Potatoes">Potatoes</option>
+                        <option value="Wheat">Wheat</option>
+                        <option value="Strawberries">Strawberries</option>
+                        <option value="Tomatoes">Tomatoes</option>
+                        <option value="Cucumbers">Cucumbers</option>
+                        <option value="Onions">Onions</option>
+                    </select>
+                </section>
+                <section>
+                    <label for="latitude">Enter Latitude:</label>
+                    <input type="text" id="latitude" name="latitude">
+                </section>
+                <section>
+                    <label for="longitude">Enter Longitude:</label>
+                    <input type="text" id="longitude" name="longitude">
+                </section>
+            </div>
+            <div class="submit-container">
+                <button type="submit" id="submitButton">Submit</button>
+            </div>
+        </form>
         <div class="output-container">
             <p id="output">Output will appear here...</p>
         </div>
     </main>
+    <script>
+        document.getElementById("predictForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Retrieve the selected crop and entered latitude and longitude
+            var crop = document.getElementById("dropdown").value;
+            var latitude = document.getElementById("latitude").value;
+            var longitude = document.getElementById("longitude").value;
+
+            // Output the values to the output container
+            document.getElementById("output").innerText = "Selected Crop: " + crop + ", Latitude: " + latitude + ", Longitude: " + longitude;
+        });
+    </script>
 </body>
 </html>
