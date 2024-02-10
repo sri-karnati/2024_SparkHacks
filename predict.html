@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Centered Input Boxes with Submit Button</title>
+    <link rel="stylesheet" href="predict.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Custom Input Boxes</h1>
+            <a href="index.html" id="homeButton">Home</a>
+        </div>
+    </header>
+    <main>
+        <div class="input-container">
+            <section>
+                <label for="dropdown">Choose crop:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="option1">Corn</option>
+                    <option value="option2">Potatoes</option>
+                    <option value="option3">Wheat</option>
+                    <option value="option4">Strawberries</option>
+                    <option value="option4">Tomatoes</option>
+                    <option value="option5">Cucumbers</option>
+                    <option value="option6">Onions</option>
+                </select>
+            </section>
+            <section>
+                <label for="latitude">Enter Latitude:</label>
+                <input type="text" id="latitude" name="latitude">
+            </section>
+            <section>
+                <label for="longitude">Enter Longitude:</label>
+                <input type="text" id="longitude" name="longitude">
+            </section>
+        </div>
+        <div class="submit-container">
+            <button type="submit">Submit</button>
+        </div>
+    </main>
+</body>
+</html>
