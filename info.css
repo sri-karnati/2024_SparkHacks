@@ -1,0 +1,67 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000022;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+
+header {
+    background-color: #1a2a40;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0; /* Ensure no gap between header and nav */
+}
+
+nav {
+    background-color: #14233c;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure nav items align directly under the header */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4FD5FF;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    background-image: url('space-background.jpg'); /* You'll need to add a space-themed background image */
+    background-size: cover;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    font-family: 'Lucida Console', 'Lucida Sans Typewriter', monospace;
+    color: #FFD700;
+}
+
+p {
+    line-height: 1.6;
+}
