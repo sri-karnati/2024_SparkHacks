@@ -20,7 +20,10 @@ body, html {
     justify-content: center;
 }
 
-
+.button-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent elements */
+}
 
 .earth {
     position: absolute;
