@@ -15,8 +15,8 @@ environment for future generations.
 Our tech stack consists of HTML/CSS for frontend, JavaScript and Python for frontend to backend communication, Firebase Realtime Database to store our data, and AWS
 to host the application. 
 
-We used the Open-Mateo API which has realtime information based on co-ordinates which we got from a '.csv' file (from: https://simplemaps.com/data/us-counties). With the co-
-ordinate data, we used the 'Soil Moisture (0-7 cm)' and 'Precipitation (rain + snow)' from each county over a year that we averaged out for a more reliable result.
+We used Open-Mateo, which is a free weather forcast API (https://open-meteo.com/en/docs#hourly=). It has realtime information based on co-ordinates which we got from a 
+'.csv' file (from: https://simplemaps.com/data/us-counties). With the co-ordinate data, we used the 'Soil Moisture (0-7 cm)' and 'Precipitation (rain + snow)' from each county over a year that we averaged out for a more reliable result.
 
 By setting hypothetical conditions for each fruit and vegetable, of which we calculate which county is the best at cultivating it, we display it in Ascending order. 
 
