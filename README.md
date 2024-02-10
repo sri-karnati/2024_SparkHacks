@@ -1,4 +1,4 @@
-﻿# 2024_SparkHacks - Ground Up
+﻿# 2024_SparkHacks - Ground Analysis
 
 A crucial part of sustainable agriculture is efficient and environmentally responsible farming. For optimal crop growth, it's essential to ensure the soil matches the
 specific needs of the crop we intend to grow. However, a common challenge in modern agriculture is the overreliance on chemical fertilizers to boost crop yields. While 
