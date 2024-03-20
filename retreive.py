@@ -1,4 +1,6 @@
 # to retreive data
+# delete 
+
 
 import json
 

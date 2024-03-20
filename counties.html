@@ -92,21 +92,45 @@
         </div>
     </main>
     <script>
-        document.getElementById("selectionForm").addEventListener("submit", function(event) {
+        document.getElementById("selectionForm").addEventListener("submit",async function(event) {
             event.preventDefault(); // Prevent the form from submitting normally
 
             // Retrieve the selected values from the dropdowns
             var crop = document.getElementById("dropdown1").value;
             var state = document.getElementById("dropdown2").value;
+            
 
             // Store the values in variables
             console.log("Selected Crop:", crop);
             console.log("Selected State:", state);
 
-            
+             // Prepare the data to be sent
+            const data = { crop: crop, state: state };
 
+            // Send the data to the server using fetch
+            try {
+                const response = await fetch('http://localhost:5000/process_selection', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+                    // Use jsonResponse here, for example, display it
+                    document.getElementById("output").innerText = JSON.stringify(jsonResponse);
+                } else {
+                    // Handle HTTP error response
+                    console.error('HTTP Error:', response.statusText);
+                    document.getElementById("output").innerText = "Failed to process.";
+                }
+            } catch (error) {
+                console.error('Fetch Error:', error);
+                document.getElementById("output").innerText = "Error during fetch.";
+            }
             // Example of displaying in the output container
-            document.getElementById("output").innerText = "Selected Crop: " + crop + ", Selected State: " + state;
+           // document.getElementById("output").innerText = "Selected Crop: " + crop + ", Selected State: " + state;
         });
     </script>
 </body>
