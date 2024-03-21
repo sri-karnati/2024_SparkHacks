@@ -42,3 +42,12 @@ Cucumbers:
 Onions:
  Ideal Soil Moisture: 0.15 (15%)
  Ideal Precipitation: 10 mm/day
+
+
+Additional installations required:
+- pip install flask
+- pip install flask-cors
+- pip install python-dotenv
+- pip install requests-cache retry-requests
+- pip install openmeteo-requests
+
