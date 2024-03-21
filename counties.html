@@ -117,9 +117,10 @@
                     body: JSON.stringify(data),
                 });
                 if (response.ok) {
+                    var count = 1;
                     const jsonResponse = await response.json();
                     const obj = JSON.parse(JSON.stringify(jsonResponse));
-                    const formattedString = `Top Counties: ${obj["Top Counties"].join(", ")}`;
+                    const formattedString = `Top Counties for ${crop} in ${state}:\n ${obj["Top Counties"].map(county => `${count++}. ${county}\n`).join('')}`;
                     document.getElementById("output").innerText = formattedString;
                 } else {
                     // Handle HTTP error response
@@ -130,8 +131,6 @@
                 console.error('Fetch Error:', error);
                 document.getElementById("output").innerText = "Error during fetch.";
             }
-            // Example of displaying in the output container
-           // document.getElementById("output").innerText = "Selected Crop: " + crop + ", Selected State: " + state;
         });
     </script>
 </body>
