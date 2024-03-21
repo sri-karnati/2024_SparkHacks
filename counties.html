@@ -118,8 +118,9 @@
                 });
                 if (response.ok) {
                     const jsonResponse = await response.json();
-                    // Use jsonResponse here, for example, display it
-                    document.getElementById("output").innerText = JSON.stringify(jsonResponse);
+                    const obj = JSON.parse(JSON.stringify(jsonResponse));
+                    const formattedString = `Top Counties: ${obj["Top Counties"].join(", ")}`;
+                    document.getElementById("output").innerText = formattedString;
                 } else {
                     // Handle HTTP error response
                     console.error('HTTP Error:', response.statusText);
