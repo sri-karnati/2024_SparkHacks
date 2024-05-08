@@ -93,5 +93,5 @@ def process_selection():
     print(f'top counties: {top_counties}')
     print(request.json)  # Add this line to debug the incoming JSON data
     return jsonify({"Top Counties": top_counties})
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
